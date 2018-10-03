@@ -1,0 +1,12 @@
+SELECT title FROM games;
+SELECT year FROM games;
+SELECT title FROM games WHERE developers = 'Rare';
+SELECT title FROM games WHERE year < 1998;
+SELECT AVG(year) FROM games;
+SELECT title, developers FROM games ORDER BY developers;
+SELECT title FROM games WHERE developers != 'Nintendo EAD';
+INSERT INTO games (title, year, developers, genre) VALUES ('F-Zero X', 1998, 'Nintendo EAD', 'Racing');
+SELECT title FROM games ORDER BY year DESC;
+DELETE from games WHERE developers != 'Hudson Soft';
+SELECT AVG(year) FROM games WHERE developers = 'Rare' OR title = 'Tony Hawk''s Pro Skater';
+SELECT id, title, genre FROM games WHERE year < 1997 OR developers = 'Hal Laboratory' OR (genre = 'Platforming' AND developers = 'Rare');
